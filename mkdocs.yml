@@ -1,0 +1,39 @@
+site_name: !ENV SITE_NAME
+site_url: !ENV SITE_URL
+repo_name: !ENV REPO_NAME
+repo_url:  !ENV REPO_URL
+
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: black
+    accent: yellow
+  features:
+    - header.autohide
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - toc.follow
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji 
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - tables
+  - toc:
+      permalink: true
+
+plugins:
+  - blog:
+      blog_dir: .
+  - search
